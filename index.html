@@ -14,13 +14,18 @@
     <script type="text/babel">
       (() => {
 
-        function showMessage() {
-          alert('Hello')
+        function Counter(props) {
+          return <li style={{backgroundColor:props.color}}>0</li>;
         }
 
         ReactDOM.render(
-          <div style={{width:100, height:100, backgroundColor:'tomato'}}
-          onClick={showMessage}></div>,
+          <div className="container">
+            <ul>
+              <Counter color="tomato"/>
+              <Counter color="skyblue"/>
+              <Counter color="limegreen"/>
+            </ul>
+          </div>,
           document.getElementById('root')
         );
       })();
